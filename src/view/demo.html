@@ -1,0 +1,18 @@
+
+<div ng-init="init()">
+    <button class="btn" ng-click="addItem();">Add</button>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4 h3">Description</div>
+            <div class="col-sm-4 h3">Code</div>
+        </div>
+    </div>
+    <div class="container-fluid item-container">
+        <div class="row" ng-repeat="item in Products">
+            <div class="col-sm-1"><button class="btn-sm" ng-click="selectItem(item.Id);">Edit</button></div>
+            <div class="col-sm-4">{{item.Description}}</div>
+            <div class="col-sm-4">{{item.Code}}</div>
+        </div>
+    </div>
+</div>

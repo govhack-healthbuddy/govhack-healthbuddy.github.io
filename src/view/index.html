@@ -1,0 +1,33 @@
+<html>
+  <head>
+
+    <!-- Third Party Libraries -->
+    <script src="../lib/jquery-2.1.1/jquery-2.1.1.min.js"></script>
+    <script src="../lib/angular-1.2.25/angular.js"></script>
+    <script src="../lib/angular-1.2.25/angular-route.js"></script>
+    <script src="../lib/ui-bootstrap-0.11.0/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    <script src="../lib/bootstrap-3.2.0/js/bootstrap.js"></script>
+
+    <!-- AngularJS App Configuration -->
+    <script src="../app.js"></script>
+
+    <!-- AngularJS Services -->
+    <script src="../service/healthService.js"></script>
+
+    <!-- AngularJS Controllers -->
+    <script src="../control/mainController.js"></script>
+    <script src="../control/demoController.js"></script>
+    <script src="../control/resultsController.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap-3.2.0/css/bootstrap.css" media="screen">
+
+  </head>
+<body>
+
+    <!-- Core Container -->
+    <div ng-app="HealthBuddyApp">
+        <ng-view />
+    </div>
+  </body>
+</html>
