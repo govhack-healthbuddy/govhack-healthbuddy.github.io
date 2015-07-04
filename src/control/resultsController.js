@@ -1,13 +1,15 @@
 
   angular.module('HealthBuddyApp.controllers').controller('resultsController', function ($scope, healthService, $location, $routeParams) {
   $scope.list = [];
+  $scope.sentiment = [];
 
   $scope.init = function() {
     var parameters = {
       latitude: $routeParams.latitude,
       longitude: $routeParams.longitude,
       gender: $routeParams.gender,
-      isChild: $routeParams.isChild
+      isChild: $routeParams.isChild,
+      facilityTypeCode: $routeParams.facilityTypeCode
     };
 
 
@@ -17,11 +19,26 @@
         $scope.list = data;
       });
 
-    // $scope.list = [
-    //   {facilityName: 'RAH'},
-    //   {facilityName: 'Flinders'}
-    // ];
   };
+
+  $scope.toPercent = function(decimalValue)
+  {
+    return decimalValue * 100;
+  };
+
+  $scope.getCapacityPercent = function(item)
+  {
+    return Math.floor((item.EmergencyDepartmentStatus.CommencedTreatment / item.EmergencyDepartmentStatus.Capacity) * 100);
+  }
+
+  $scope.getCapacityIndicator = function(item)
+  {
+    var percent = $scope.getCapacityPercent(item);
+    if (percent > 90) { return "red"; }
+    if (percent > 70) { return "yellow"; }
+    return "green";
+  }
+
 
   $scope.navigate = function(facility, transportMethod) {
 
@@ -32,7 +49,7 @@
       var url = "https://maps.google.com?saddr=" + sourceLatLong + "&daddr=" + destinationLatLong;
       location.href = url;
     }
-    else {
+    else if (transportMethod == "taxi") {
       $location.url("/taxi");
     }
 

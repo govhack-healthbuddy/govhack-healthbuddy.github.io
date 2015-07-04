@@ -36,15 +36,16 @@ background-color: pink;
 color: black;
 }
 
-.btn-gender-male .active
+.btn-gender-female .btn-default:hover, .btn-gender-female  .btn-default:focus, .btn-gender-female  .btn-default:active, .btn-gender-female  .btn-default.active, .btn-gender-female  .open > .dropdown-toggle.btn-default
+{
+  background-color: pink;
+}
+
+.btn-gender-male .btn-default:hover, .btn-gender-male .btn-default:focus, .btn-gender-male .btn-default:active, .btn-gender-male .btn-default.active, .btn-gender-male .open > .dropdown-toggle.btn-default
 {
   background-color: lightblue;
 }
 
-.btn-gender-female .active
-{
-background-color: pink;
-}
 
 div.info-text
 {

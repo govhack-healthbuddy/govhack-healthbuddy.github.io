@@ -2,15 +2,32 @@
   <div ng-repeat="item in list">
     <div class="list-group">
       <div class="list-group-item">
-        <span class="badge" style="float: right;">Est Waiting: 3 Hours</span>
+        <span ng-if="item.EmergencyDepartmentStatus != null" class="badge" style="float: right;">Ave Waiting Time: {{item.EmergencyDepartmentStatus.AvgWaitTimeMinsExclHigh}}min</span>
+
+
         <h4 class="list-group-item-heading">{{item.Name}}</h4>
 
+
+
+                <div ng-click="navigate(item, 'taxi');"><div style=" float: right; font-size: 3em; padding-left: 15px; "><span class="fa fa-taxi" aria-hidden="true"></span></div></a>
+                <div ng-click="navigate(item, 'car');"><div style=" float: right; font-size: 3em; padding-left: 15px;"><span class="fa fa-car" aria-hidden="true"></span></div></a>
+                <div ng-click="navigate(item, 'subway');"><div style="float: right; font-size: 3em; padding-left: 15px;"><span class="fa fa-subway" aria-hidden="true"></span></div></a>
+
+
+
         <p class="list-group-item-text">Twitter Sentiment:
-        <span class="glyphicon glyphicon-star"></span>
-        <span class="glyphicon glyphicon-star"></span>
-        <span class="glyphicon glyphicon-star"></span>
-        <span class="glyphicon glyphicon-star-empty"></span>
-        <span class="glyphicon glyphicon-star-empty"></span>
+        <span ng-if="item.TwitterSentiment >= 0" class="glyphicon glyphicon-star"></span>
+        <span ng-if="item.TwitterSentiment < 0" class="glyphicon glyphicon-star-empty"></span>
+        <span ng-if="item.TwitterSentiment >= 1" class="glyphicon glyphicon-star"></span>
+        <span ng-if="item.TwitterSentiment < 1" class="glyphicon glyphicon-star-empty"></span>
+        <span ng-if="item.TwitterSentiment >= 2" class="glyphicon glyphicon-star"></span>
+        <span ng-if="item.TwitterSentiment < 2" class="glyphicon glyphicon-star-empty"></span>
+        <span ng-if="item.TwitterSentiment >= 3" class="glyphicon glyphicon-star"></span>
+        <span ng-if="item.TwitterSentiment < 3" class="glyphicon glyphicon-star-empty"></span>
+        <span ng-if="item.TwitterSentiment >= 4" class="glyphicon glyphicon-star"></span>
+        <span ng-if="item.TwitterSentiment < 4" class="glyphicon glyphicon-star-empty"></span>
+
+
         </p>
 
 
@@ -19,17 +36,24 @@
           Approx Travel Time: {{item.TravelTimes[0].Minutes}}min
           <span class="fa fa-car" aria-hidden="true"></span>
         </p>
-        <div ng-click="navigate(item, 'taxi');"><div style="float: right; font-size: 3em; padding-left: 15px; "><span class="fa fa-taxi" aria-hidden="true"></span></div></a>
-        <div ng-click="navigate(item, 'car');"><div style="float: right; font-size: 3em; padding-left: 15px;"><span class="fa fa-car" aria-hidden="true"></span></div></a>
-        <div ng-click="navigate(item, 'subway');"><div style="float: right; font-size: 3em; padding-left: 15px;"><span class="fa fa-subway" aria-hidden="true"></span></div></a>
-        <br />
+        <span  style="float: left; width: 30%;" ng-if="item.EmergencyDepartmentStatus != null">      Average Waiting Time &lt;4Hrs <div class="progress" style="width: 30%; ">
+               <div class="progress-bar" role="progressbar" aria-valuenow="{{toPercent(item.LessThan4HrsPct)}}" aria-valuemin="0" aria-valuemax="100" style="width: {{toPercent(item.LessThan4HrsPct)}}%;">
+                  {{toPercent(item.LessThan4HrsPct)}} %
+               </div>
+        </div>
+        </span>
 
+        <span  style="float: left; width: 30%;" ng-if="item.EmergencyDepartmentStatus != null">      Capacity <div class="progress" style="width: 30%; ">
+               <div class="progress-bar" role="progressbar" aria-valuenow="{{getCapacityPercent(item)}}" aria-valuemin="0" aria-valuemax="100" style="width: {{getCapacityPercent(item)}}%; background-color: {{getCapacityIndicator(item)}}; color: black">
+                  {{getCapacityPercent(item)}} %
+               </div>
+        </div>
+        </span>
 
-        <div class="progress" style="width: 30%; ">
-       <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-Capacity (80% Full)
-       </div>
-</div>
+<span ng-if="item.EmergencyDepartmentStatus != null">
+<br />
+<br />
+</span>
       </div>
     </div>
   </div>

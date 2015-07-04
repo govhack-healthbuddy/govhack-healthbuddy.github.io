@@ -12,31 +12,31 @@ $('body').on('click', '.btn-group button', function (e) {
   <div>
     <span>Gender</span>
     <div class="btn-group" role="group1" aria-label="2" style="width: 100%">
-      <button type="button" class="btn btn-default btn-gender btn-gender-female"><span class="fa fa-female" aria-hidden="true"></span></button>
-      <button type="button" class="btn btn-default btn-gender btn-gender-male"><span class="fa fa-male" aria-hidden="true"></span></button>
+      <button ng-click="setGender('Female');" type="button" class="btn btn-default btn-gender btn-gender-female"><span class="fa fa-female" aria-hidden="true"></span></button>
+      <button ng-click="setGender('Male');" type="button" class="btn btn-default btn-gender btn-gender-male"><span class="fa fa-male" aria-hidden="true"></span></button>
     </div>
   </div>
 
   <div style="padding-top: 20px;">
     <span>Age Range</span>
     <div class="btn-group" role="group2" aria-label="..." style="width: 100%">
-      <button type="button" class="btn btn-default btn-agerange" style="width: 50%"><span aria-hidden="true">Child</span></button>
-      <button type="button" class="btn btn-default btn-agerange" style="width: 50%"><span aria-hidden="true">Adult</span></button>
+      <button ng-click="setIsChild(true);" type="button" class="btn btn-default btn-agerange" style="width: 50%"><span aria-hidden="true">Child</span></button>
+      <button ng-click="setIsChild(false);" type="button" class="btn btn-default btn-agerange" style="width: 50%"><span aria-hidden="true">Adult</span></button>
     </div>
   </div>
 
 <div   style="padding-top: 20px;  width: 100%; ">
-  <button type="button" class="btn btn-default btn-lg" ng-click="navigateNext('ed')" style="text-align: left; font-size: 2.5em; width: 100%; padding-top: 10px; height=200px;">
+  <button type="button" class="btn btn-default btn-lg" ng-click="navigateNext('hospital')" style="text-align: left; font-size: 2.5em; width: 100%; padding-top: 10px; height=200px;">
    <span class="fa fa-hospital-o" aria-hidden="true"></span>&nbsp;&nbsp;ED / Hospital
   </button>
 
   <button type="button" class="btn btn-default btn-lg" ng-click="navigateNext('gp')" style="text-align: left; font-size: 2.5em; width: 100%; padding-top: 10px; height=200px;">
   <span class="fa fa-user-md" aria-hidden="true"></span>  &nbsp;GP / Locum
   </button>
-  <button type="button" class="btn btn-default btn-lg" ng-click="navigateNext('ph')" style="text-align: left; font-size: 2.5em; width: 100%; padding-top: 10px; height=200px;">
+  <button type="button" class="btn btn-default btn-lg" ng-click="navigateNext('pharmacy')" style="text-align: left; font-size: 2.5em; width: 100%; padding-top: 10px; height=200px;">
   <span class="fa fa-plus-square" aria-hidden="true"></span>  &nbsp;Pharmacy
   </button>
-  <button type="button" class="btn btn-default btn-lg" ng-click="navigateNext('co')" style="text-align: left; font-size: 2.5em; width: 100%; padding-top: 10px; height=200px;">
+  <button type="button" class="btn btn-default btn-lg" ng-click="navigateNext('community')" style="text-align: left; font-size: 2.5em; width: 100%; padding-top: 10px; height=200px;">
   <span class="fa fa-users" aria-hidden="true"></span>  Community
   </button>
 

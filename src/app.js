@@ -9,7 +9,7 @@ config(['$routeProvider', function($routeProvider) {
       when("/demo", { templateUrl: "demo.html", controller: "demoController" }).
       when("/demo2", { templateUrl: "demo2.html", controller: "demoController" }).
       when("/demo3", { templateUrl: "demo3.html", controller: "demoController" }).
-      when("/results/:facilityTypeCode/:latitude/:longitude/:gender/:isChild", { templateUrl: "results.html", controller: "resultsController" }).
+      when("/results/:latitude/:longitude/:gender/:isChild/:facilityTypeCode", { templateUrl: "results.html", controller: "resultsController" }).
       when("/taxi/", { templateUrl: "taxi.html", controller: "taxiController" }).
       otherwise({ redirectTo: '/home' });
 }]);

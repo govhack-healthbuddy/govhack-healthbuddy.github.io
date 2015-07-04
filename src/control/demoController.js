@@ -1,6 +1,9 @@
 
   angular.module('HealthBuddyApp.controllers').controller('demoController', function ($scope, healthService, $location) {
 
+  $scope.gender = 'Male';
+  $scope.isChild = false;
+
   $scope.init = function() {
     if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function (position) {
@@ -12,19 +15,32 @@
 
   };
 
+  $scope.setGender = function(gender) {
+    $scope.gender = gender;
+  }
+
+  $scope.setIsChild = function(isChild) {
+    $scope.isChild = isChild;
+  }
+
   $scope.navigateNext = function(facilityTypeCode) {
 
     var parameters = {
       position: $scope.position,
       facilityTypeCode: facilityTypeCode,
-      gender: 'M',
-      age: 'Adult'
+      gender: $scope.gender,
+      isChild: $scope.isChild
     };
 
-    $location.url("/results/" + facilityTypeCode + "/" + $scope.position.coords.latitude +
-      "/" + $scope.position.coords.longitude +
-      "/M/false");
-    //$location.url("/results/ed/0/0/M/false");
+    $location.url(
+      "/results/" +
+      $scope.position.coords.latitude + "/" +
+      $scope.position.coords.longitude + "/" +
+      $scope.gender + "/" +
+      $scope.isChild + "/" +
+      facilityTypeCode
+    );
+
   }
 
 });
