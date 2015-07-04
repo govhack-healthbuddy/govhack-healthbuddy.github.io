@@ -1,3 +1,16 @@
 <div ng-init="init()">
-  
+  <div ng-repeat="item in list">
+    <div class="list-group">
+      <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading">{{item.facilityName}}</h4><span class="badge">Est Waiting: 3 Hours</span>
+        <p class="list-group-item-text">Rating:
+        <span class="glyphicon glyphicon-star"></span>
+        <span class="glyphicon glyphicon-star"></span>
+        <span class="glyphicon glyphicon-star"></span>
+        <span class="glyphicon glyphicon-star-empty"></span>
+        <span class="glyphicon glyphicon-star-empty"></span>
+        </p>
+      </a>
+    </div>
+  </div>
 </div>

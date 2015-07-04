@@ -1,15 +1,25 @@
 
-  angular.module('HealthBuddyApp.controllers').controller('resultsController', function ($scope, healthService, $location) {
-  $scope.Context = [];
+  angular.module('HealthBuddyApp.controllers').controller('resultsController', function ($scope, healthService, $location, $routeParams) {
+  $scope.list = [];
 
   $scope.init = function() {
-    $scope.getData();
-  };
+    var parameters = {
+      latitude: $routeParams.latitude,
+      longitude: $routeParams.longitude,
+      gender: $routeParams.gender,
+      isChild: $routeParams.isChild
+    };
 
-  $scope.getData = function() {
-    healthService.getData()
-      .then(function(response) {
-          $scope.updateModel(response.data);
+    /*
+    healthService.getFacilityList(parameters)
+      .then(function (response) {
+        var data = response.data;
+        $scope.list = data;
       });
-  }
+    */
+    $scope.list = [
+      {facilityName: 'RAH'},
+      {facilityName: 'Flinders'}
+    ];
+  };
 });

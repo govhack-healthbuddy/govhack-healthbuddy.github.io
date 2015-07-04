@@ -12,8 +12,19 @@
 
   };
 
-  $scope.navigateNext = function() {
-    $location.url("/results/");
+  $scope.navigateNext = function(facilityTypeCode) {
+
+    var parameters = {
+      position: $scope.position,
+      facilityTypeCode: facilityTypeCode,
+      gender: 'M',
+      age: 'Adult'
+    };
+
+    /*$location.url("/results/" + $scope.position.coords.latitude +
+      "/" + $scope.position.coords.longitude +
+      "/M/false");*/
+    $location.url("/results/0/0/M/false");
   }
 
 });
