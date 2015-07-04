@@ -7,8 +7,8 @@
 
 div.bigredbutton{
   background: url('../style/bigredbutton.jpg');
-  min-height : 100%;
-  min-width : 100%;
+  min-height : 68%;
+  min-width : 68%;
   background-size: contain;
   background-repeat:no-repeat;
   overflow-y: hidden;
@@ -16,7 +16,7 @@ div.bigredbutton{
   text-align: center;
   vertical-align: middle;
 
-
+  float: left;
 }
 
 .btn-gender
@@ -49,7 +49,7 @@ div.top-button
 
 /* Base styles (regardless of theme) */
 .bs-callout {
-  margin: 20px 0;
+  margin: 0px 0;
   padding: 15px 30px 15px 15px;
   border-left: 5px solid #eee;
 }
