@@ -15,7 +15,7 @@
 
 
 
-        <p class="list-group-item-text">Twitter Sentiment:
+        <p class="list-group-item-text">Twitter Sentiment: <br />
         <span ng-if="item.TwitterSentiment >= 0" class="glyphicon glyphicon-star"></span>
         <span ng-if="item.TwitterSentiment < 0" class="glyphicon glyphicon-star-empty"></span>
         <span ng-if="item.TwitterSentiment >= 1" class="glyphicon glyphicon-star"></span>
@@ -33,16 +33,19 @@
 
 
         <p>
-          Approx Travel Time: {{item.TravelTimes[0].Minutes}}min
+          Est Travel: {{item.TravelTimes[0].Minutes}}min
           <span class="fa fa-car" aria-hidden="true"></span>
         </p>
-        <span  style="float: left; width: 30%;" ng-if="item.EmergencyDepartmentStatus != null">      Average Waiting Time &lt;4Hrs <div class="progress" style="width: 30%; ">
+        <span  style="float: left; width: 30%;" ng-if="item.EmergencyDepartmentStatus != null">      Ave Wait Time &lt;4Hrs <div class="progress" style="width: 30%; ">
                <div class="progress-bar" role="progressbar" aria-valuenow="{{toPercent(item.LessThan4HrsPct)}}" aria-valuemin="0" aria-valuemax="100" style="width: {{toPercent(item.LessThan4HrsPct)}}%;">
                   {{toPercent(item.LessThan4HrsPct)}} %
                </div>
         </div>
         </span>
-
+        <span ng-if="item.EmergencyDepartmentStatus != null">
+<br />
+<br />
+</span>
         <span  style="float: left; width: 30%;" ng-if="item.EmergencyDepartmentStatus != null">      Capacity <div class="progress" style="width: 30%; ">
                <div class="progress-bar" role="progressbar" aria-valuenow="{{getCapacityPercent(item)}}" aria-valuemin="0" aria-valuemax="100" style="width: {{getCapacityPercent(item)}}%; background-color: {{getCapacityIndicator(item)}}; color: black">
                   {{getCapacityPercent(item)}} %
