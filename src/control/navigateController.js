@@ -1,5 +1,5 @@
 
-  angular.module('HealthBuddyApp.controllers').controller('resultsController', function ($scope, healthService, $location, $routeParams) {
+  angular.module('HealthBuddyApp.controllers').controller('navigateController', function ($scope, healthService, $location, $routeParams) {
   $scope.list = [];
 
   $scope.init = function() {
@@ -23,8 +23,4 @@
       {facilityName: 'Flinders'}
     ];
   };
-
-  $scope.navigate = function(transportMode) {
-    $location.url('/navigate/rah/' + transportMode + '/0/0');
-  }
 });
