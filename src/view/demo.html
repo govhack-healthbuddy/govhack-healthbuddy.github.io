@@ -1,37 +1,46 @@
 
 <script>
 $('body').on('click', '.btn-group button', function (e) {
-    $(this).addClass('active');
-    $(this).siblings().removeClass('active');
+  $(this).addClass('active');
+  $(this).siblings().removeClass('active');
 
-    //do any other button related things
+  //do any other button related things
 });
 </script>
 
 <div ng-init="init()">
-<div>
-  <span>Gender</span>
-  <div class="btn-group" role="group1" aria-label="2" style="width: 100%">
-  <button type="button" class="btn btn-default btn-gender btn-gender-female"><span class="icon-female" aria-hidden="true"></span></button>
-  <button type="button" class="btn btn-default btn-gender btn-gender-male"><span class="icon-male" aria-hidden="true"></span></button>
-</div>
-</div>
+  <div>
+    <span>Gender</span>
+    <div class="btn-group" role="group1" aria-label="2" style="width: 100%">
+      <button type="button" class="btn btn-default btn-gender btn-gender-female"><span class="icon-female" aria-hidden="true"></span></button>
+      <button type="button" class="btn btn-default btn-gender btn-gender-male"><span class="icon-male" aria-hidden="true"></span></button>
+    </div>
+  </div>
 
-<div style="padding-top: 20px;">
-  <span>Age Range</span>
-  <div class="btn-group" role="group2" aria-label="..." style="width: 100%">
-  <button type="button" class="btn btn-default btn-agerange" style="width: 20%"><span aria-hidden="true">0-18</span></button>
-  <button type="button" class="btn btn-default btn-agerange" style="width: 20%"><span aria-hidden="true">19-25</span></button>
-  <button type="button" class="btn btn-default btn-agerange" style="width: 20%"><span aria-hidden="true">26-35</span></button>
-  <button type="button" class="btn btn-default btn-agerange" style="width: 20%"><span aria-hidden="true">36-50</span></button>
-  <button type="button" class="btn btn-default btn-agerange" style="width: 20%"><span aria-hidden="true">&gt; 50</span></button>
+  <div style="padding-top: 20px;">
+    <span>Age Range</span>
+    <div class="btn-group" role="group2" aria-label="..." style="width: 100%">
+      <button type="button" class="btn btn-default btn-agerange" style="width: 50%"><span aria-hidden="true">Child</span></button>
+      <button type="button" class="btn btn-default btn-agerange" style="width: 50%"><span aria-hidden="true">Adult</span></button>
+    </div>
+  </div>
+  <div class="bs-callout bs-callout-info "   style="margin-top: 20px; width=100%" ><h4>
 
-</div>
+    Here is some information about when to go to a GP from the SA Health website.
+
+  </h4>
+
 </div>
 <div class="top-button"  style="padding-top: 20px;">
-<button type="button" class="btn btn-default btn-lg" ng-click="navigateNext()">
-  Continue <span class="glyphicon glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
-</button>
+  <button type="button" class="btn btn-default btn-lg" ng-click="navigateNext()">
+    Find an Emergency Dept <span class="glyphicon glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+  </button>
+  <button type="button" class="btn btn-default btn-lg" ng-click="navigateNext()">
+    Find a GP/Locum <span class="glyphicon glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+  </button>
+  <button type="button" class="btn btn-default btn-lg" ng-click="navigateNext()">
+    Find a Pharmacy <span class="glyphicon glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+  </button>
 </div>
 
 </div>
