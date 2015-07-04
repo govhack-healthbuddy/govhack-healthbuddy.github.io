@@ -8,8 +8,31 @@ div.bigredbutton{
   overflow-x: hidden;
   text-align: center;
   vertical-align: middle;
+
+
 }
 
+.btn-gender
+{
+  width: 50%;
+  height: 50px;
+  font-size: 36px;
+}
+
+.btn-gender-male
+{
+  background-color: blue;
+}
+
+.btn-gender-female
+{
+background-color: pink;
+}
+
+div.info-text
+{
+  float: left;
+}
 div.top-button
 {
   float: right;
