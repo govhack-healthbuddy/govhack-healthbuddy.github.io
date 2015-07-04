@@ -26,11 +26,26 @@
     <link rel="stylesheet" type="text/css" href="../style/layout.css" media="screen">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
-    
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .fit { /* set relative picture size */
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .center {
+        display: block;
+        margin: auto;
+      }
+    </style>
 
   </head>
 <body>
-
+    <div width="100%">
+      <img class="center fit" src="../style/healthbuddy_logo.png" />
+    </div>
     <!-- Core Container -->
     <div ng-app="HealthBuddyApp">
         <ng-view />

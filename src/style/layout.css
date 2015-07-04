@@ -7,14 +7,14 @@
 
 div.bigredbutton{
   background: url('../style/bigredbutton.jpg');
-  height : 80%;
-  width : 80%;
+  height : 70%;
+  width : 70%;
   background-size: contain;
   background-repeat:no-repeat;
   overflow-y: hidden;
   overflow-x: hidden;
   text-align: center;
-  margin-left: 40px;
+  margin-left: 50px;
 }
 
 .btn-gender
