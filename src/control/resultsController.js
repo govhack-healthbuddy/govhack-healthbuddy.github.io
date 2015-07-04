@@ -23,7 +23,18 @@
     // ];
   };
 
-  $scope.navigate = function(transportMode) {
-    $location.url('/navigate/rah/' + transportMode + '/0/0');
+  $scope.navigate = function(facility, transportMethod) {
+
+    if (transportMethod == "car" || transportMethod == "bus")
+    {
+      var sourceLatLong = $routeParams.latitude + "," + $routeParams.longitude;
+      var destinationLatLong = facility.Location.Latitude + "," + facility.Location.Longitude;
+      var url = "https://maps.google.com?saddr=" + sourceLatLong + "&daddr=" + destinationLatLong;
+      location.href = url;
+    }
+    else {
+      $location.url("/taxi");
+    }
+
   }
 });

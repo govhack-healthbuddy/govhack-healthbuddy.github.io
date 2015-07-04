@@ -8,7 +8,7 @@ config(['$routeProvider', function($routeProvider) {
       when("/home", { templateUrl: "main.html", controller: "mainController" }).
       when("/demo", { templateUrl: "demo.html", controller: "demoController" }).
       when("/results/:facilityTypeCode/:latitude/:longitude/:gender/:isChild", { templateUrl: "results.html", controller: "resultsController" }).
-      when("/navigate/:facilityCode/:tansportMode/:latitude/:longitude", { templateUrl: "navigate.html", controller: "navigateController" }).
+      when("/taxi/", { templateUrl: "taxi.html", controller: "taxiController" }).
       otherwise({ redirectTo: '/home' });
 }]);
 
