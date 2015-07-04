@@ -6,6 +6,8 @@ div.bigredbutton{
   background-repeat:no-repeat;
   overflow-y: hidden;
   overflow-x: hidden;
+  text-align: center;
+  vertical-align: middle;
 }
 
 /* Side notes for calling out things
