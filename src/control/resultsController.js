@@ -25,7 +25,7 @@
 
   $scope.navigate = function(facility, transportMethod) {
 
-    if (transportMethod == "car" || transportMethod == "bus")
+    if (transportMethod == "car" || transportMethod == "subway")
     {
       var sourceLatLong = $routeParams.latitude + "," + $routeParams.longitude;
       var destinationLatLong = facility.Location.Latitude + "," + facility.Location.Longitude;

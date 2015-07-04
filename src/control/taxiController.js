@@ -12,8 +12,8 @@
       });
     */
     $scope.list = [
-      {Name: 'Adelaide Suburban Taxi', PhoneNumber: "0418801084"},
-      {Name: 'YellowCab', PhoneNumber: "0418801084"}
+      {Name: 'Adelaide Suburban Taxi', PhoneNumber: "1800 333 888"},
+      {Name: 'YellowCab', PhoneNumber: "1800 333 888"}
     ];
   };
 });
