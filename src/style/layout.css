@@ -38,12 +38,12 @@ color: black;
 
 .btn-gender-male .active
 {
-  color: lightblue;
+  background-color: lightblue;
 }
 
 .btn-gender-female .active
 {
-color: pink;
+background-color: pink;
 }
 
 div.info-text
