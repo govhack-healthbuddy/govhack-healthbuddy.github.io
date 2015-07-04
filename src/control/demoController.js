@@ -21,10 +21,10 @@
       age: 'Adult'
     };
 
-    /*$location.url("/results/" + facilityTypeCode + "/" + $scope.position.coords.latitude +
+    $location.url("/results/" + facilityTypeCode + "/" + $scope.position.coords.latitude +
       "/" + $scope.position.coords.longitude +
-      "/M/false");*/
-    $location.url("/results/ed/0/0/M/false");
+      "/M/false");
+    //$location.url("/results/ed/0/0/M/false");
   }
 
 });

@@ -5,13 +5,12 @@ angular.module('HealthBuddyApp.services').factory('healthService', function ($ht
 
     var healthAPI = {};
 
-    healthAPI.Url = 'http://healthbuddy-api-govhack.azurewebsites.net/api/facility/';
+    healthAPI.Url = 'http://healthbuddy-api-govhack.azurewebsites.net/api/Facility';
 
     healthAPI.getFacilityList = function (parameters) {
         return $http({
             method: "GET",
-            url: healthAPI.Url,
-            data: parameters
+            url: healthAPI.Url + "?latitude=" + parameters.latitude + "&longitude=" + parameters.longitude + "&gender=" + parameters.gender + "&isChild=" + parameters.isChild
         });
     }
 

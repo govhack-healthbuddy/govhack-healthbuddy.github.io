@@ -7,21 +7,20 @@
       latitude: $routeParams.latitude,
       longitude: $routeParams.longitude,
       gender: $routeParams.gender,
-      isChild: $routeParams.isChild,
-      facilityTypeCode: $routeParams.facilityTypeCode
+      isChild: $routeParams.isChild
     };
 
-    /*
+
     healthService.getFacilityList(parameters)
       .then(function (response) {
-        var data = response.data;
+        var data = response.data.Facilities;
         $scope.list = data;
       });
-    */
-    $scope.list = [
-      {facilityName: 'RAH'},
-      {facilityName: 'Flinders'}
-    ];
+
+    // $scope.list = [
+    //   {facilityName: 'RAH'},
+    //   {facilityName: 'Flinders'}
+    // ];
   };
 
   $scope.navigate = function(transportMode) {

@@ -3,9 +3,9 @@
     <div class="list-group">
       <div class="list-group-item">
         <span class="badge" style="float: right;">Est Waiting: 3 Hours</span>
-        <h4 class="list-group-item-heading">{{item.facilityName}}</h4>
+        <h4 class="list-group-item-heading">{{item.Name}}</h4>
 
-        <p class="list-group-item-text">Rating:
+        <p class="list-group-item-text">Twitter Sentiment:
         <span class="glyphicon glyphicon-star"></span>
         <span class="glyphicon glyphicon-star"></span>
         <span class="glyphicon glyphicon-star"></span>
@@ -16,7 +16,7 @@
 
 
         <p>
-          Approx Travel Time: 15min (10km)
+          Approx Travel Time: {{item.TravelTimes[0].Minutes}}min
           <span class="fa fa-car" aria-hidden="true"></span>
         </p>
         <div ng-click="navigate('taxi');"><div style="float: right; font-size: 3em; padding-left: 15px; "><span class="fa fa-taxi" aria-hidden="true"></span></div></a>
