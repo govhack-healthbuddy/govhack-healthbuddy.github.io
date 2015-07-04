@@ -2,10 +2,8 @@
   <div ng-repeat="item in list">
     <div class="list-group">
       <a href="#" class="list-group-item">
-        <h4 class="list-group-item-heading">{{item.facilityName}}</h4><span class="badge">Est Waiting: 3 Hours</span>
-        <div style="float: right; font-size: 64px; margin-right: 50px"><span class="fa fa-taxi" aria-hidden="true"></span></div>
-        <div style="float: right; font-size: 64px; margin-right: 50px"><span class="fa fa-car" aria-hidden="true"></span></div>
-        <div style="float: right; font-size: 64px; margin-right: 50px"><span class="fa fa-bus" aria-hidden="true"></span></div>
+        <span class="badge" style="float: right;">Est Waiting: 3 Hours</span>
+        <h4 class="list-group-item-heading">{{item.facilityName}}</h4>
 
         <p class="list-group-item-text">Rating:
         <span class="glyphicon glyphicon-star"></span>
@@ -14,14 +12,20 @@
         <span class="glyphicon glyphicon-star-empty"></span>
         <span class="glyphicon glyphicon-star-empty"></span>
         </p>
+
+
+
         <p>
           Approx Travel Time: 15min (10km)
           <span class="fa fa-car" aria-hidden="true"></span>
         </p>
+        <div style="float: right; font-size: 3em; padding-left: 15px; "><span class="fa fa-taxi" aria-hidden="true"></span></div>
+        <div style="float: right; font-size: 3em; padding-left: 15px;"><span class="fa fa-car" aria-hidden="true"></span></div>
+        <div style="float: right; font-size: 3em; padding-left: 15px;"><span class="fa fa-bus" aria-hidden="true"></span></div>
         <br />
 
 
-        <div class="progress" style="width: 30%">
+        <div class="progress" style="width: 30%; ">
        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
 Capacity (80% Full)
        </div>
