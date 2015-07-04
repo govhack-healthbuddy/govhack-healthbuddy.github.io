@@ -1,8 +1,15 @@
 
   angular.module('HealthBuddyApp.controllers').controller('demoController', function ($scope, healthService, $location) {
-  $scope.Context = [];
 
   $scope.init = function() {
+    if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            $scope.$apply(function(){
+                 $scope.position = position;
+               });
+          });
+    }
+
   };
 
   $scope.navigateNext = function() {

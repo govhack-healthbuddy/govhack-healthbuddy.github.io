@@ -15,8 +15,8 @@ div.bigredbutton{
   overflow-x: hidden;
   text-align: center;
   vertical-align: middle;
-
-  float: left;
+  align-content: center;
+  
 }
 
 .btn-gender
