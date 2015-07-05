@@ -5,7 +5,7 @@
         <span ng-if="item.EmergencyDepartmentStatus != null" class="badge" style="float: right;">Ave Waiting Time: {{getAveWaitTime(item)}}min</span>
 
 
-        <h4 class="list-group-item-heading">{{item.Name}}</h4>
+        <h4 class="list-group-item-heading">{{item.Name}}<span ng-if="!item.OpenNow"> (Closed)</span></h4>
 
 
 
@@ -30,7 +30,9 @@
 
         </p>
 
-
+        <p ng-if="item.ClosingTime != null">
+          Closes: {{item.ClosingTime}}
+        </p>
 
         <p>
           Est Travel: {{item.TravelTimes[0].Minutes}}min
