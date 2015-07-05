@@ -20,6 +20,10 @@
       });
 
   };
+  $scope.getAveWaitTime = function(item)
+  {
+    return Math.floor(item.EmergencyDepartmentStatus.AvgWaitTimeMinsExclHigh);
+  }
 
   $scope.toPercent = function(decimalValue)
   {

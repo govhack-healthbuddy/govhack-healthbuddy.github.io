@@ -1,7 +1,7 @@
 
   angular.module('HealthBuddyApp.controllers').controller('demoController', function ($scope, healthService, $location) {
 
-  $scope.gender = 'Male';
+  $scope.gender = 'M';
   $scope.isChild = false;
 
   $scope.init = function() {

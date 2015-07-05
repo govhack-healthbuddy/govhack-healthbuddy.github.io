@@ -2,7 +2,7 @@
   <div ng-repeat="item in list">
     <div class="list-group">
       <div class="list-group-item">
-        <span ng-if="item.EmergencyDepartmentStatus != null" class="badge" style="float: right;">Ave Waiting Time: {{item.EmergencyDepartmentStatus.AvgWaitTimeMinsExclHigh}}min</span>
+        <span ng-if="item.EmergencyDepartmentStatus != null" class="badge" style="float: right;">Ave Waiting Time: {{getAveWaitTime(item)}}min</span>
 
 
         <h4 class="list-group-item-heading">{{item.Name}}</h4>
@@ -36,6 +36,11 @@
           Est Travel: {{item.TravelTimes[0].Minutes}}min
           <span class="fa fa-car" aria-hidden="true"></span>
         </p>
+        <p ng-if="item.TravelTimes[1].TransitRoute != null">
+          Next Bus: {{item.TravelTimes[1].TransitRoute}} ({{item.TravelTimes[1].TransitDepartureTime}})
+          <span class="fa fa-bus" aria-hidden="true"></span>
+        </p>
+
         <span  style="width: 30%;" ng-if="item.EmergencyDepartmentStatus != null">      Ave Wait Time &lt;4Hrs <div class="progress" style="width: 30%; ">
                <div class="progress-bar" role="progressbar" aria-valuenow="{{toPercent(item.LessThan4HrsPct)}}" aria-valuemin="0" aria-valuemax="100" style="width: {{toPercent(item.LessThan4HrsPct)}}%;">
                   {{toPercent(item.LessThan4HrsPct)}} %
