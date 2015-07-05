@@ -9,11 +9,14 @@
   <div ng-repeat="item in list">
     <div class="list-group">
       <div class="list-group-item">
-        <a href="tel:{{item.PhoneNumber}}">
+        <a href="tel:{{item.Phone}}">
           <div style="float: right; font-size: 3em; padding-left: 15px; "><span class="fa fa-taxi" aria-hidden="true"></span></div>
         <h4 class="list-group-item-heading">{{item.Name}}</h4>
 
-        <p class="list-group-item-text">Phone: {{item.PhoneNumber}}
+        <p class="list-group-item-text">Phone: {{item.Phone}}
+        </p>
+
+        <p class="list-group-item-text">{{item.Services}}
         </p>
 
       </a>

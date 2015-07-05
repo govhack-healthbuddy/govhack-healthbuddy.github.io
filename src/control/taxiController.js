@@ -4,16 +4,12 @@
 
   $scope.init = function() {
 
-    /*
-    healthService.getTaxiList(parameters)
+
+    healthService.getTaxiList()
       .then(function (response) {
         var data = response.data;
-        $scope.list = data;
+        $scope.list = data.TaxiServices;
       });
-    */
-    $scope.list = [
-      {Name: 'Adelaide Suburban Taxi', PhoneNumber: "1800 333 888"},
-      {Name: 'YellowCab', PhoneNumber: "1800 333 888"}
-    ];
+
   };
 });
