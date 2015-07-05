@@ -26,6 +26,41 @@ $('body').on('click', '.btn-group button', function (e) {
   </div>
 
 <div   style="padding-top: 20px;  width: 100%; ">
+  <button type="button" class="btn btn-default btn-lg" ng-click="setShowChoose()" style="text-align: left; font-size: 2.5em; width: 100%; padding-top: 10px; height=200px;">
+   <span class="fa fa-question" aria-hidden="true"></span>&nbsp;&nbsp;Help Me Choose
+  </button>
+  <div ng-show="doShowChoose" class="bs-callout bs-callout-info "   style="margin-top: 0; width=100%" ><h4>
+      <div style="float: left; width: 50%">
+        <b>GP</b>
+        <br />
+<ul style="margin-left: 20px;">
+  <li>  Ear pain</li>
+<li>Flu</li>
+<li>  Gastro</li>
+<li>Minor sports injuries</li>
+<li>  Persistent headache</li>
+<li>  Sore throat</li>
+<li>  Sprained ankle</li>
+</ul>
+      </div>
+
+      <div style="float: right; width: 50%">
+        <b>Pharmacy</b>
+        <br />
+        <ul style="margin-left: 20px;">
+          <li>Cold</li>
+  <li>Constipation</li>
+  <li>Hay fever</li>
+  <li>Mild skin irritation</li>
+  <li>Minor grazes</li>
+  <li>Nappy rash</li>
+  <li>Tinea</li>
+        </ul>
+      </div>
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </h4>
+  </div>
+
   <button type="button" class="btn btn-default btn-lg" ng-click="navigateNext('hospital')" style="text-align: left; font-size: 2.5em; width: 100%; padding-top: 10px; height=200px;">
    <span class="fa fa-hospital-o" aria-hidden="true"></span>&nbsp;&nbsp;ED / Hospital
   </button>

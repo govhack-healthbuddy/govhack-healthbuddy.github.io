@@ -15,13 +15,19 @@
 
   };
 
+  $scope.doShowChoose = false;
+
   $scope.setGender = function(gender) {
     $scope.gender = gender;
-  }
+  };
 
   $scope.setIsChild = function(isChild) {
     $scope.isChild = isChild;
-  }
+  };;
+
+  $scope.setShowChoose = function () {
+    $scope.doShowChoose = true;
+  };
 
   $scope.navigateNext = function(facilityTypeCode) {
 
