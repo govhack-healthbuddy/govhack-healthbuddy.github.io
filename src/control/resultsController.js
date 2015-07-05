@@ -12,6 +12,10 @@
       facilityTypeCode: $routeParams.facilityTypeCode
     };
 
+    if ($routeParams.demo == "yes")
+    {
+      healthService.Demo = true;
+    }
 
     healthService.getFacilityList(parameters)
       .then(function (response) {
